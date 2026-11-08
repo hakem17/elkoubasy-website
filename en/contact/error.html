@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.ekReady)d.classList.remove('js')},3000)})(document.documentElement)</script>
+<title>Contact (form error state) — El Koubasy</title>
+<meta name="description" content="El Koubasy frozen vegetables in 400 g packs (peas, green beans, okra, molokhia, spinach and more) and Batatsaia French fries.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Schibsted+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logos/favicon.png">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<style>
+/* V3 phone menu: the six lines under Our Products */
+.mm-products{padding:6px 0 14px;border-bottom:1px solid rgba(255,255,255,.14)}
+.mm-gh{display:block;font-size:12.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.6);margin:8px 0 6px}
+.mobile-menu .mm-sub{display:grid;gap:0;margin:0;padding:0;list-style:none}
+.mobile-menu .mm-sub li{border:0}
+.mobile-menu .mm-sub a{display:block;padding:9px 0;font-size:17px;font-weight:600;color:#fff;border:0;opacity:1;transform:none}
+.mobile-menu .mm-sub li:last-child a{color:var(--orange)}
+.pc{padding-bottom:18px}
+.clients--compact{background:#fff;padding-block:clamp(56px,6vw,88px)}
+.clients--compact .section-head--center{margin-bottom:clamp(20px,2.4vw,32px)}
+.clients--compact .logo-item{height:clamp(80px,6.4vw,100px)}
+</style>
+<style>
+/* V3 gap fixes (lab) */
+.mm-products{padding:6px 0 14px;border-bottom:1px solid rgba(255,255,255,.14)}
+.mm-gh{display:block;font-size:12.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.6);margin:8px 0 6px}
+.mobile-menu .mm-sub{display:grid;gap:0;margin:0;padding:0;list-style:none}
+.mobile-menu .mm-sub li{border:0}
+.mobile-menu .mm-sub a{display:block;padding:9px 0;font-size:17px;font-weight:600;color:#fff;border:0;opacity:1;transform:none}
+.mobile-menu .mm-sub li:last-child a{color:var(--orange)}
+.v3-hero{padding:clamp(140px,14vw,190px) 0 clamp(40px,5vw,64px);background:var(--paper)}
+.v3-hero h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.6rem,5vw,4.4rem);line-height:1.02;letter-spacing:-.025em;color:var(--navy);margin:0 0 18px;max-width:16ch}
+.v3-hero .lede{max-width:56ch}
+.ct-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,80px);align-items:start}
+.ct-side h2{font-family:var(--f-display);font-weight:700;font-size:clamp(1.3rem,1.7vw,1.6rem);color:var(--navy);margin:0 0 18px}
+.ct-side .contact-list{margin:0 0 40px}
+.ct-facts{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 22px;font-size:15px;line-height:1.5;border-top:1px solid var(--line);padding-top:22px}
+.ct-facts dt{color:var(--slate)}
+.ct-facts dd{margin:0;color:var(--navy);font-weight:600}
+.ct-form{border:1px solid var(--line);box-shadow:0 18px 50px -30px rgba(31,42,68,.35)}
+.ct-form .enq-f textarea{font:inherit;font-weight:400;font-size:15px;padding:11px 12px;border:1px solid rgba(31,42,68,.22);border-radius:8px;min-height:110px;resize:vertical;color:var(--navy)}
+.ct-about{grid-column:1/-1;margin:0;padding:10px 14px;border-radius:8px;background:var(--paper);font-size:14.5px;font-weight:600;color:var(--navy)}
+.ct-about::before{content:'';display:inline-block;width:14px;height:2px;margin-inline-end:10px;vertical-align:middle;background:var(--orange)}
+.ct-form h2{grid-column:1/-1;margin:0;font-family:var(--f-display);font-size:1.5rem;color:var(--navy)}
+.enq-alert{grid-column:1/-1;display:flex;gap:10px;align-items:flex-start;margin:0;padding:12px 14px;border-radius:8px;background:#FDECEC;color:#8A1F1F;font-size:14.5px;line-height:1.45}
+.enq-alert .icon{flex:none;width:18px;height:18px;margin-top:2px}
+.enq-f.err input,.enq-f.err select{border-color:#C62828;box-shadow:0 0 0 1px #C62828}
+.enq-err{font-size:13px;font-weight:500;color:#C62828}
+.ty{padding:clamp(140px,14vw,190px) 0 clamp(64px,7vw,104px);background:var(--paper)}
+.ty-mark{display:grid;place-items:center;width:84px;height:84px;border-radius:50%;box-shadow:inset 0 0 0 6px var(--orange);color:var(--navy);margin-bottom:28px}
+.ty-mark .icon{width:34px;height:34px}
+.ty h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,4.6vw,4rem);line-height:1.04;letter-spacing:-.025em;color:var(--navy);margin:0 0 16px;max-width:18ch}
+.ty .lede{max-width:58ch;margin:0}
+.ty-steps{list-style:none;margin:clamp(40px,5vw,64px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-block:1px solid var(--line)}
+.ty-steps li{padding:28px 28px 30px 0;display:grid;gap:8px;align-content:start}
+.ty-steps li + li{padding-inline-start:28px;border-inline-start:1px solid var(--line)}
+.ty-steps b{font-family:var(--f-display);font-weight:800;font-size:2rem;color:var(--orange);line-height:1}
+.ty-steps h2{margin:0;font-family:var(--f-display);font-size:1.25rem;color:var(--navy)}
+.ty-steps p{margin:0;color:var(--slate);line-height:1.55;max-width:34ch}
+.ty-more{margin-top:clamp(36px,4vw,56px);display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center}
+.ty-more h2{width:100%;margin:0 0 4px;font-size:12.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--slate)}
+.nf-lines{list-style:none;margin:clamp(36px,4vw,56px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}
+.nf-lines a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 4px;border-bottom:1px solid var(--line);font-weight:600;color:var(--navy);margin-inline-end:24px;text-decoration:none}
+.nf-lines a .icon{color:var(--orange)}
+@media (max-width:900px){.ct-grid,.ty-steps,.nf-lines{grid-template-columns:1fr}.ty-steps li,.ty-steps li + li{padding:22px 0;border-inline-start:0}.ty-steps li + li{border-top:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14"/><path d="M5 19 14 10"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M21.5 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.6 4.2 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L7.6 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.8 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2.7c3.6 4.3 6 7.7 6 11a6 6 0 0 1-12 0c0-3.3 2.4-6.7 6-11Z"/><path d="M9.5 15a2.6 2.6 0 0 0 2.5 2.5"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5Z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol>
+  <symbol id="i-factory" viewBox="0 0 24 24"><path d="M2 21V10l6 3.5V10l6 3.5V5h4l1 16Z"/><path d="M2 21h20"/><path d="M7 17h2M12 17h2"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+</svg>
+
+<header class="nav on-hero" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="../index.html" aria-label="El Koubasy — home"><img class="logo-color" src="../../assets/logos/elkoubasy-logo.png" alt="El Koubasy for Food Industries" width="140" height="48"><img class="logo-white" src="../../assets/logos/elkoubasy-logo-white.png" alt="" width="139" height="48"></a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li class="has-mega"><a href="../products/index.html" aria-expanded="false" aria-controls="mega-products">Our Products <svg class="icon"><use href="#i-chev"/></svg></a>
+          <div class="mega" id="mega-products">
+            <div class="mega-inner">
+              <ul class="mega-list">
+              <li class="mega-group"><span class="mega-gh">Juices</span>
+                <ul>
+                  <li><a href="../products/fresh-juices-and-pulps/index.html" data-img="line-fresh-juices-and-pulps">Fresh juices and pulps <svg class="icon"><use href="#i-arrow"/></svg></a></li>
+                  <li><a href="../products/pasteurized-juices-and-nectars/index.html" data-img="line-pasteurized-juices-and-nectars">Pasteurized juices and nectars <svg class="icon"><use href="#i-arrow"/></svg></a></li>
+                  <li><a href="../products/concentrates-and-nfc/index.html" data-img="juice-concentrates">Concentrates and NFC <svg class="icon"><use href="#i-arrow"/></svg></a></li>
+                </ul>
+              </li>
+              <li class="mega-group"><span class="mega-gh">Frozen Produce</span>
+                <ul>
+                  <li><a href="../products/frozen-fruits/index.html" data-img="line-frozen-fruits">Frozen fruits <svg class="icon"><use href="#i-arrow"/></svg></a></li>
+                  <li><a href="../products/frozen-vegetables/index.html" data-img="line-frozen-vegetables">Frozen vegetables <svg class="icon"><use href="#i-arrow"/></svg></a></li>
+                </ul>
+              </li>
+              <li class="mega-group"><span class="mega-gh">Gelato &amp; Desserts</span>
+                <ul>
+                  <li><a href="../products/gelato-and-sorbet/index.html" data-img="line-gelato-and-sorbet">Gelato and sorbet <svg class="icon"><use href="#i-arrow"/></svg></a></li>
+                </ul>
+              </li>
+              <li class="mega-blend"><a href="../contact/index.html?type=custom-blend" data-img="who-we-are">Create your own blend <svg class="icon"><use href="#i-arrow"/></svg></a></li>
+              </ul>
+              <figure class="mega-preview"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../../assets/img/line-fresh-juices-and-pulps-800.jpg" alt="" data-img="line-fresh-juices-and-pulps" width="800" height="640"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../../assets/img/line-pasteurized-juices-and-nectars-800.jpg" alt="" data-img="line-pasteurized-juices-and-nectars" width="800" height="640"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../../assets/img/juice-concentrates-800.jpg" alt="" data-img="juice-concentrates" width="800" height="640"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../../assets/img/line-frozen-fruits-800.jpg" alt="" data-img="line-frozen-fruits" width="800" height="640"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../../assets/img/line-frozen-vegetables-800.jpg" alt="" data-img="line-frozen-vegetables" width="800" height="640"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../../assets/img/line-gelato-and-sorbet-800.jpg" alt="" data-img="line-gelato-and-sorbet" width="800" height="640"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../../assets/img/who-we-are-800.jpg" alt="" data-img="who-we-are" width="800" height="640"><figcaption>Fresh juices and pulps</figcaption></figure>
+            </div>
+          </div>
+        </li>
+        <li><a href="../capabilities/index.html">Capabilities</a></li>
+        <li><a href="../sustainability/index.html">Sustainability</a></li>
+        <li><a href="../industries/index.html">Industries</a></li>
+        <li><a href="../about/index.html">About us</a></li>
+        <li><a href="../contact/index.html">Contact us</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="lang" href="../../ar/contact/error.html" lang="ar" hreflang="ar" title="Arabic version">العربية</a>
+      <a class="btn btn-primary btn-desktop" href="../contact/index.html">Request a quote</a>
+      <a class="btn btn-primary btn-compact" href="../contact/index.html">Request a quote</a>
+    </div>
+    <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li class="mm-products" style="--i:0"><span class="mm-gh">Our Products</span><ul class="mm-sub"><li><a href="../products/fresh-juices-and-pulps/index.html">Fresh juices and pulps</a></li><li><a href="../products/pasteurized-juices-and-nectars/index.html">Pasteurized juices and nectars</a></li><li><a href="../products/concentrates-and-nfc/index.html">Concentrates and NFC</a></li><li><a href="../products/frozen-fruits/index.html">Frozen fruits</a></li><li><a href="../products/frozen-vegetables/index.html">Frozen vegetables</a></li><li><a href="../products/gelato-and-sorbet/index.html">Gelato and sorbet</a></li><li><a href="../products/index.html">All products</a></li></ul></li>
+      <li><a href="../about/index.html" style="--i:1">About us <svg class="icon"><use href="#i-arrow"/></svg></a></li>
+      <li><a href="../capabilities/index.html" style="--i:2">Capabilities <svg class="icon"><use href="#i-arrow"/></svg></a></li>
+      <li><a href="../sustainability/index.html" style="--i:3">Sustainability <svg class="icon"><use href="#i-arrow"/></svg></a></li>
+      <li><a href="../industries/index.html" style="--i:4">Industries <svg class="icon"><use href="#i-arrow"/></svg></a></li>
+      <li><a href="../contact/index.html" style="--i:5">Contact us <svg class="icon"><use href="#i-arrow"/></svg></a></li>
+    </ul>
+    <div class="mm-foot">
+      <a class="btn btn-primary" href="../contact/index.html">Request a quote <svg class="icon"><use href="#i-arrow"/></svg></a>
+      <div class="mm-contact"><a href="mailto:info@elkoubasy.com">info@elkoubasy.com</a><a href="tel:+201112222490" dir="ltr">+20 111 222 2490</a></div>
+      <a class="lang" href="../../ar/contact/error.html" lang="ar" hreflang="ar" title="Arabic version">العربية</a>
+    </div>
+  </div>
+</header>
+<style>
+/* V2b Packaging and Storage: one fact row on every product line */
+.pk-row{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid var(--line,rgba(31,42,68,.14))}
+.pk-cell{display:flex;flex-direction:column;gap:10px;padding:clamp(24px,2.4vw,36px) clamp(18px,2vw,32px)}
+.pk-cell + .pk-cell{border-inline-start:1px solid var(--line,rgba(31,42,68,.14))}
+.pk-cell:first-child{padding-inline-start:0}
+.pk-label{font-size:12.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--slate)}
+.pk-label::before{content:"";display:inline-block;width:14px;height:2px;margin-inline-end:8px;vertical-align:middle;background:var(--orange)}
+.pk-value{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,2.7vw,2.6rem);line-height:1.02;letter-spacing:-.02em;color:var(--navy);direction:ltr;unicode-bidi:isolate;text-align:start}
+.pk-value--tbc{color:rgba(31,42,68,.38)}
+.pk-note{margin:0;font-size:15px;line-height:1.55;color:var(--slate);max-width:30ch}
+.pk-terms{display:flex;align-items:center;gap:10px;margin:22px 0 0;font-size:15px;color:var(--slate)}
+.pk-terms .icon{flex:none;width:18px;height:18px;color:var(--orange)}
+@media (max-width:900px){
+  .pk-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pk-cell:nth-child(odd){padding-inline-start:0;border-inline-start:0}
+  .pk-cell:nth-child(n+3){border-top:1px solid var(--line,rgba(31,42,68,.14))}
+}
+@media (max-width:480px){
+  .pk-row{grid-template-columns:1fr}
+  .pk-cell{padding-inline:0;border-inline-start:0!important}
+  .pk-cell + .pk-cell{border-top:1px solid var(--line,rgba(31,42,68,.14))}
+  .pk-terms{align-items:flex-start}
+}
+</style><style>
+.pk-title{margin:clamp(40px,4vw,56px) 0 18px;font-family:var(--f-display);font-weight:700;font-size:clamp(1.25rem,1.6vw,1.5rem);color:var(--navy)}
+.pk-terms{margin-bottom:0}
+</style>
+<main id="main" tabindex="-1">
+<section class="v3-hero" id="top">
+  <div class="wrap">
+    <h1>Talk to our export team</h1>
+    <p class="lede">Ask for a quote, a sample, a spec sheet or a custom blend. We reply within 24 hours.</p>
+  </div>
+</section>
+<section class="section contact" id="enquiry" aria-label="Contact details and request form">
+  <div class="wrap ct-grid">
+    <div class="ct-side">
+      <h2>Reach us directly</h2>
+        <ul class="contact-list">
+          <li><span class="contact-ico"><svg class="icon"><use href="#i-mail"/></svg></span><div><span class="contact-label">Email</span><span class="contact-value"><a href="mailto:info@elkoubasy.com">info@elkoubasy.com</a></span></div></li>
+          <li><span class="contact-ico"><svg class="icon"><use href="#i-phone"/></svg></span><div><span class="contact-label">Phone</span><span class="contact-value"><a href="tel:+201112222490" dir="ltr">+20 111 222 2490</a></span></div></li>
+          <li><span class="contact-ico"><svg class="icon"><use href="#i-pin"/></svg></span><div><span class="contact-label">Factory</span><span class="contact-value">Third Industrial Zone, 6th of October City, Giza, Egypt</span></div></li>
+          <li><span class="contact-ico"><svg class="icon"><use href="#i-pin"/></svg></span><div><span class="contact-label">Offices</span><span class="contact-value">Cairo (Nozha), Dubai and Oman <mark class="tbc" data-q="Q10">[TBC: full addresses]</mark></span></div></li>
+        </ul>
+      <h2>How we ship</h2>
+        <dl class="ct-facts">
+          <dt>Minimum order</dt><dd>One full container, single or mixed products</dd>
+          <dt>Lead time</dt><dd>3–4 weeks after the order is confirmed and the advance payment is made</dd>
+          <dt>Terms</dt><dd>Ex Works (EXW); CIF, FOB or CFR on request</dd>
+          <dt>Ports</dt><dd>Suez, Port Said, Sokhna, Alexandria, Safaga</dd>
+        </dl>
+    </div>
+      <form class="enq-form ct-form" aria-label="Contact El Koubasy" data-odoo="enquiry" novalidate>
+        <h2>Send a request</h2>
+        <p class="ct-about" hidden></p>
+        <p class="enq-alert" role="alert"><b aria-hidden="true">!</b>Two fields need a look before we can send your request.</p>
+        <div class="enq-type" role="radiogroup" aria-label="Request type"><label><input type="radio" name="type" value="quote" checked><span>Quote</span></label><label><input type="radio" name="type" value="sample"><span>Sample</span></label><label><input type="radio" name="type" value="spec"><span>Spec sheet</span></label><label><input type="radio" name="type" value="custom-blend"><span>Custom blend</span></label></div>
+        <label class="enq-f">Product line<select name="product"><option value="">Choose a product line</option><option value="fresh-juices-and-pulps">Fresh juices and pulps</option><option value="pasteurized-juices-and-nectars">Pasteurized juices and nectars</option><option value="concentrates-and-nfc">Concentrates and NFC</option><option value="frozen-fruits">Frozen fruits</option><option value="frozen-vegetables">Frozen vegetables</option><option value="gelato-and-sorbet">Gelato and sorbet</option><option>Custom blend</option><option>Not sure yet</option></select></label>
+        <label class="enq-f">Product (optional)<input name="item" placeholder="e.g. Mango slices"></label>
+        <label class="enq-f">Volume needed<span class="enq-vol"><input name="volume" inputmode="decimal" placeholder="e.g. 1"><select name="unit" aria-label="Unit"><option>containers</option><option>tonnes</option><option>kg</option></select></span></label>
+        <label class="enq-f">Destination country<input name="country" autocomplete="country-name"></label>
+        <label class="enq-f">Company<input name="company" autocomplete="organization" value="Nordic Foods AB"></label>
+        <label class="enq-f err">Name<input name="name" autocomplete="name"><span class="enq-err">Please add your name.</span></label>
+        <label class="enq-f err">Work email<input name="email" type="email" autocomplete="email" value="anna@nordicfoods"><span class="enq-err">Enter a full email address, like name@company.com.</span></label>
+        <label class="enq-f full">Message (optional)<textarea name="message" placeholder="Specifications, packaging, timing"></textarea></label>
+        <button class="btn btn-primary" type="submit">Send request <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </form>
+  </div>
+</section>
+<script>
+/* V3: "Request a quote" links arrive as contact/?type=quote&line=frozen-fruits&product=Mango; pre-fill the form */
+(function(){var q=new URLSearchParams(location.search),f=document.querySelector('.ct-form');if(!f)return;
+var t=q.get('type');if(t){var r=f.querySelector('input[name=type][value="'+t+'"]');if(r)r.checked=true;}
+var l=q.get('line'),p=q.get('product'),sel=f.querySelector('select[name=product]');if(l&&sel){sel.value=l;}
+if(p){f.querySelector('input[name=item]').value=p;}
+if(l||p){var a=f.querySelector('.ct-about');a.textContent='Asking about: '+[sel&&sel.value?sel.options[sel.selectedIndex].text:null,p].filter(Boolean).join(' · ');a.hidden=false;}})();
+</script>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="../../assets/logos/elkoubasy-logo-white.png" alt="El Koubasy for Food Industries" loading="lazy">
+        <div class="footer-official">
+          <strong>Official Manufacturer &amp; Exporter</strong>
+          El Koubasy Food Industries is the official manufacturing and export business represented by this website. This website is not affiliated with independently operated shops or third-party businesses using similar names.
+          <p class="footer-legal">El Koubasy Food Industries<br>Commercial Register No. <span dir="ltr">21926</span> (North Cairo)<br>Tax Registration No. <span dir="ltr">208-426-655</span></p>
+        </div>
+      </div>
+      <div>
+        <h2 class="footer-h">Products</h2>
+        <ul class="footer-links">
+          <li><a href="../products/fresh-juices-and-pulps/index.html">Fresh juices and pulps</a></li>
+          <li><a href="../products/pasteurized-juices-and-nectars/index.html">Pasteurized juices and nectars</a></li>
+          <li><a href="../products/concentrates-and-nfc/index.html">Concentrates and NFC</a></li>
+          <li><a href="../products/frozen-fruits/index.html">Frozen fruits</a></li>
+          <li><a href="../products/frozen-vegetables/index.html">Frozen vegetables</a></li>
+          <li><a href="../products/gelato-and-sorbet/index.html">Gelato and sorbet</a></li>
+          <li><a href="../contact/index.html?type=custom-blend">Custom blends</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Company</h2>
+        <ul class="footer-links">
+          <li><a href="../about/index.html">About us</a></li>
+          <li><a href="../capabilities/index.html">Capabilities</a></li>
+        <li><a href="../sustainability/index.html">Sustainability</a></li>
+          <li><a href="../industries/index.html">Industries</a></li>
+          <li><a href="../contact/index.html">Contact us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Contact</h2>
+        <div class="contact-big">
+          <a href="mailto:info@elkoubasy.com">info@elkoubasy.com</a>
+          <a href="tel:+201112222490" dir="ltr">+20 111 222 2490</a>
+        </div>
+        <p class="addr">Third Industrial Zone, 6th of October City, Giza, Egypt</p>
+        <p class="addr">Commercial office in Nozha area</p>
+        <p class="addr">Offices in Dubai &amp; Oman</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> El Koubasy Food Industries. All rights reserved.</span>
+      <nav aria-label="Legal"><a href="../privacy/index.html">Privacy Policy</a><a href="../terms/index.html">Terms of Use</a></nav>
+      <div class="socials"><a class="social-icon" href="https://www.facebook.com/elkoubasy" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></svg></a>
+          <a class="social-icon" href="https://www.instagram.com/el_koubasy" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
+          <a class="social-icon" href="https://www.linkedin.com/company/el-koubasy-food-industries" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+        </div>
+      <a class="to-top" href="#top">Back to top <i aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></i></a>
+    </div>
+  </div>
+</footer>
+<script src="../../assets/js/vendor/lenis.min.js"></script>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>
